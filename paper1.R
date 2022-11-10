@@ -16,7 +16,7 @@ tree <- as.phylo(~Class1/Class2/Class3/Class4/Class5/Class6, data = my_data1, di
 plot(tree)
 
 ggplot(my_data1, aes(Material, Class6, fill = Amount)) + geom_tile() +
-    scale_fill_distiller(palette = 'RdBu', breaks = c(0,1,4), limits = c(0,5)) + theme_bw()
+scale_fill_distiller(palette = 'RdBu', breaks = c(0,1,4), limits = c(0,5)) + theme_bw() + theme(axis.text.y = element_text(face = "italic"))
     
     
     
